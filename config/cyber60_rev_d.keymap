@@ -27,8 +27,6 @@
 &none             &mo 1           &kp LALT  &kp SPACE  &kp SPACE  &kp SPACE  &none   &kp RIGHT_ALT  &to 1   &none
 &kp C_PP
             >;
-
-            sensor-bindings = <&inc_dec_kp A C>;
         };
 
         fn_layer {
