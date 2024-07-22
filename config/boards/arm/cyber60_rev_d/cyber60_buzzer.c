@@ -43,7 +43,7 @@ void _play(uint32_t period)
     k_sleep(K_MSEC(50));
 }
 
-//void play_sound_1()
+void play_sound_1()
 {
     _play(1000000);
     _play(500000);
@@ -52,7 +52,7 @@ void _play(uint32_t period)
     _play(50000);
 }
 
-//void play_sound_2()
+void play_sound_2()
 {
     _play(1500000);
     _play(3900000);
@@ -60,19 +60,19 @@ void _play(uint32_t period)
     _play(1500000);
 }
 
-//void play_sound_3()
+void play_sound_3()
 {
     _play(1500000);
     _play(3900000);
 }
 
-//void play_sound_4()
+void play_sound_4()
 {
     _play(2000000);
     _play(3900000);
 }
 
-//void play_sound_5()
+void play_sound_5()
 {
     _play(2500000);
     _play(3900000);               
