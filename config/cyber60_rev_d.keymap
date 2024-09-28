@@ -65,8 +65,8 @@
 &kp ESC           &kp N1          &kp N2    &kp N3     &kp N4     &kp N5     &kp N6  &kp N7         &kp N8    &kp N9     &kp N0    &kp MINUS  &kp EQUAL  &kp BSLH       &kp DELETE
 &kp TAB           &kp Q           &kp W     &kp E      &kp R      &kp T      &kp Y   &kp U          &kp UP    &kp O      &kp P     &kp LBKT   &kp RBKT   &kp BACKSPACE
 &kp LEFT_CONTROL  &kp A           &kp S     &kp D      &kp F      &kp G      &kp H   &kp LEFT       &kp DOWN  &kp RIGHT  &kp SEMI  &kp SQT    &kp ENTER  &kp RET
-&kp LSHFT         &kp LEFT_SHIFT  &kp Z     &kp X      &kp C      &kp V      &kp B   &kp N          &kp M     &kp COMMA  &kp DOT   &kp FSLH   &kp RSHFT  &tog 0
-&none             &mo 1           &kp LALT  &kp SPACE  &kp SPACE  &kp SPACE  &none   &kp RIGHT_ALT  &tog 1    &none
+&kp LSHFT         &kp LEFT_SHIFT  &kp Z     &kp X      &kp C      &kp V      &kp B   &kp N          &kp M     &kp COMMA  &kp DOT   &kp FSLH   &trans     &trans
+&none             &trans          &kp LALT  &kp SPACE  &kp SPACE  &kp SPACE  &none   &kp RIGHT_ALT  &trans    &none
 &kp C_PP
             >;
         };
