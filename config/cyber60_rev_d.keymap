@@ -9,7 +9,7 @@
     keymap {
         compatible = "zmk,keymap";
 
-        base_layer {
+        Layer-0 {
             // Base layer
             // ------------------------------------------------------------------------------------------
             // | ESC |  1  |  2  |  3  |  4  |  5  |  6  |  7  |  8  |  9  |  0  |  -  |  =  |   BKSP   |
@@ -20,7 +20,7 @@
             // | Rotary | (<-- Rotary switch) ----------------------------------------------------------- 
 
             bindings = <
-&kp ESC           &kp N1          &kp N2    &kp N3     &kp N4     &kp N5     &kp N6  &kp N7         &kp N8  &kp N9     &kp N0    &kp MINUS  &kp EQUAL  &kp BSLH       &kp DELETE
+&gresc            &kp N1          &kp N2    &kp N3     &kp N4     &kp N5     &kp N6  &kp N7         &kp N8  &kp N9     &kp N0    &kp MINUS  &kp EQUAL  &kp BSLH       &kp DELETE
 &kp TAB           &kp Q           &kp W     &kp E      &kp R      &kp T      &kp Y   &kp U          &kp I   &kp O      &kp P     &kp LBKT   &kp RBKT   &kp BACKSPACE
 &kp LEFT_CONTROL  &kp A           &kp S     &kp D      &kp F      &kp G      &kp H   &kp J          &kp K   &kp L      &kp SEMI  &kp SQT    &kp ENTER  &kp RET
 &kp LSHFT         &kp LEFT_SHIFT  &kp Z     &kp X      &kp C      &kp V      &kp B   &kp N          &kp M   &kp COMMA  &kp DOT   &kp FSLH   &kp RSHFT  &sl 2
@@ -29,7 +29,7 @@
             >;
         };
 
-        fn_layer {
+        Layer-1 {
             // Function layer
             // ------------------------------------------------------------------------------------------
             // | RESET | F1 |  F2 |  F3 |  F4 |  F5 |  F6 |  F7 |  F8 |  F9 | F10 | F11 | F12 |TRNS | DEL |
@@ -40,7 +40,7 @@
             // | Rotary | (<-- Rotary switch) ----------------------------------------------------------- 
 
             bindings = <
-&gresc    &kp F1    &kp F2        &kp F3          &kp F4         &kp F5          &kp F6          &kp F7  &kp F8  &kp F9  &kp F10          &kp F11  &kp F12  &trans  &trans
+&kp ESC   &kp F1    &kp F2        &kp F3          &kp F4         &kp F5          &kp F6          &kp F7  &kp F8  &kp F9  &kp F10          &kp F11  &kp F12  &trans  &trans
 &trans    &trans    &kp UP        &trans          &kp C_PREV     &trans          &trans          &trans  &trans  &trans  &kp PRINTSCREEN  &trans   &trans   &trans
 &kp CAPS  &kp LEFT  &kp DOWN      &kp RIGHT       &kp C_NEXT     &trans          &trans          &trans  &trans  &trans  &trans           &trans   &trans   &trans
 &trans    &trans    &kp LEFT_GUI  &kp C_AL_FILES  &kp C_AL_CALC  &kp LANGUAGE_1  &kp LANGUAGE_2  &trans  &trans  &trans  &trans           &trans   &trans   &trans
@@ -49,7 +49,7 @@
             >;
         };
 
-        layer_2 {
+        Settings {
             bindings = <
 &trans  &bt BT_SEL 0     &bt BT_SEL 1     &bt BT_SEL 2     &bt BT_SEL 3  &bt BT_SEL 4                     &trans                            &trans           &trans           &trans  &trans  &trans  &trans  &bootloader     &bt BT_CLR
 &trans  &trans           &rgb_ug RGB_BRI  &trans           &trans        &trans                           &trans                            &rgb_ug RGB_SAD  &rgb_ug RGB_SAI  &trans  &trans  &trans  &trans  &bt BT_CLR_ALL
@@ -60,7 +60,7 @@
             >;
         };
 
-        layer_3 {
+        Tekken {
             bindings = <
 &kp ESC           &kp N1          &kp N2    &kp N3     &kp N4     &kp N5     &kp N6  &kp N7         &kp N8  &kp N9     &kp N0    &kp MINUS  &kp EQUAL  &kp BSLH       &kp DELETE
 &kp TAB           &kp Q           &kp F4    &kp F10    &kp R      &kp T      &kp Y   &kp U          &kp F8  &kp F9     &kp P     &kp LBKT   &kp RBKT   &kp BACKSPACE
