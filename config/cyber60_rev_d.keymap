@@ -64,7 +64,7 @@
             bindings = <
 &kp ESC           &kp N1          &kp N2    &kp N3     &kp N4     &kp N5     &kp N6  &kp N7         &kp N8  &kp N9     &kp N0    &kp MINUS  &kp EQUAL  &kp BSLH       &kp DELETE
 &kp TAB           &kp Q           &kp F4    &kp F10    &kp R      &kp T      &kp Y   &kp U          &kp F8  &kp F9     &kp P     &kp LBKT   &kp RBKT   &kp BACKSPACE
-&kp LEFT_CONTROL  &kp F1          &kp F3    &kp F2     &kp F      &kp G      &kp H   &kp F5         &kp F6  &kp F7     &kp SEMI  &kp SQT    &kp ENTER  &kp RET
+&kp LEFT_CONTROL  &kp F11         &kp F3    &kp F2     &kp F      &kp G      &kp H   &kp F5         &kp F6  &kp F7     &kp SEMI  &kp SQT    &kp ENTER  &kp RET
 &kp LSHFT         &kp LEFT_SHIFT  &kp Z     &kp X      &kp C      &kp V      &kp B   &kp N          &kp M   &kp COMMA  &kp DOT   &kp FSLH   &trans     &trans
 &none             &trans          &kp LALT  &kp SPACE  &kp SPACE  &kp SPACE  &none   &kp RIGHT_ALT  &trans  &none
 &kp C_PP
