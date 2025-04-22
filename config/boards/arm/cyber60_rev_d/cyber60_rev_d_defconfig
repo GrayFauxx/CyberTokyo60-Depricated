@@ -56,5 +56,5 @@ CONFIG_USB_HID_POLL_INTERVAL_MS=1
 CONFIG_ZMK_KSCAN_DEBOUNCE_PRESS_MS=0
 CONFIG_ZMK_KSCAN_DEBOUNCE_RELEASE_MS=5
 
-# Im so unsure where to put this????
-CONFIG_ZMK_STUDIO=y
+# ZMK Studio isnt worth it honestly wish it was easier
+# CONFIG_ZMK_STUDIO=y
