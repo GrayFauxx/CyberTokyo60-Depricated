@@ -9,7 +9,7 @@
     keymap {
         compatible = "zmk,keymap";
 
-        Layer-0 {
+        Main {
             // Base layer
             // ------------------------------------------------------------------------------------------
             // | ESC |  1  |  2  |  3  |  4  |  5  |  6  |  7  |  8  |  9  |  0  |  -  |  =  |   BKSP   |
@@ -23,13 +23,24 @@
 &gresc            &kp N1          &kp N2    &kp N3     &kp N4     &kp N5     &kp N6  &kp N7         &kp N8  &kp N9     &kp N0    &kp MINUS  &kp EQUAL  &kp BSLH       &kp DELETE
 &kp TAB           &kp Q           &kp W     &kp E      &kp R      &kp T      &kp Y   &kp U          &kp I   &kp O      &kp P     &kp LBKT   &kp RBKT   &kp BACKSPACE
 &kp LEFT_CONTROL  &kp A           &kp S     &kp D      &kp F      &kp G      &kp H   &kp J          &kp K   &kp L      &kp SEMI  &kp SQT    &kp ENTER  &kp RET
-&kp LSHFT         &kp LEFT_SHIFT  &kp Z     &kp X      &kp C      &kp V      &kp B   &kp N          &kp M   &kp COMMA  &kp DOT   &kp FSLH   &kp RSHFT  &sl 2
-&none             &lt 1 LEFT_GUI  &kp LALT  &kp SPACE  &kp SPACE  &kp SPACE  &none   &kp RIGHT_ALT  &tog 1  &none
-&kp C_PP
+&kp LSHFT         &kp LEFT_SHIFT  &kp Z     &kp X      &kp C      &kp V      &kp B   &kp N          &kp M   &kp COMMA  &kp DOT   &kp FSLH   &kp RSHFT  &sl 3
+&none             &lt 1 LEFT_GUI  &kp LALT  &kp SPACE  &kp SPACE  &kp SPACE  &none   &kp RIGHT_ALT  &tog 2  &none
+&none
             >;
         };
 
-        Layer-1 {
+        Game {
+            bindings = <
+&trans  &trans    &trans    &trans     &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans    &kp UP    &trans     &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &kp LEFT  &kp DOWN  &kp RIGHT  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans    &trans    &trans     &trans  &trans  &trans  &trans  &trans  &kp Z   &kp X   &trans  &trans  &trans
+&trans  &trans    &trans    &trans     &trans  &trans  &trans  &trans  &trans  &trans
+&trans
+            >;
+        };
+
+        FnLayer {
             // Function layer
             // ------------------------------------------------------------------------------------------
             // | RESET | F1 |  F2 |  F3 |  F4 |  F5 |  F6 |  F7 |  F8 |  F9 | F10 | F11 | F12 |TRNS | DEL |
@@ -40,22 +51,22 @@
             // | Rotary | (<-- Rotary switch) ----------------------------------------------------------- 
 
             bindings = <
-&kp ESC                &kp F1    &kp F2    &kp F3     &kp F4         &kp F5  &kp F6  &kp F7  &kp F8  &kp F9  &kp F10          &kp F11  &kp F12  &trans  &trans
-&trans                 &trans    &kp UP    &trans     &kp C_PREV     &trans  &trans  &trans  &trans  &trans  &kp PRINTSCREEN  &trans   &trans   &trans
-&mt LEFT_CONTROL CLCK  &kp LEFT  &kp DOWN  &kp RIGHT  &kp C_NEXT     &trans  &trans  &trans  &trans  &trans  &trans           &trans   &trans   &trans
-&trans                 &trans    &trans    &trans     &kp C_AL_CALC  &trans  &trans  &trans  &trans  &trans  &kp Z            &kp X    &trans   &trans
-&trans                 &trans    &trans    &trans     &trans         &trans  &trans  &trans  &trans  &trans
-&kp C_PP
+&kp ESC                &kp F1           &kp F2           &kp F3           &kp F4           &kp F5     &kp F6  &kp F7  &kp F8  &kp F9  &kp F10  &kp F11  &kp F12  &trans  &trans
+&kp KP_NUMLOCK         &kp KP_N7        &kp KP_NUMBER_8  &kp KP_NUMBER_9  &kp C_PREV       &trans     &trans  &trans  &trans  &trans  &trans   &trans   &trans   &trans
+&mt LEFT_CONTROL CLCK  &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &kp C_NEXT       &trans     &trans  &trans  &trans  &trans  &trans   &trans   &trans   &trans
+&trans                 &trans           &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &kp PSCRN  &trans  &trans  &trans  &trans  &trans   &trans   &trans   &trans
+&trans                 &trans           &trans           &trans           &kp KP_NUMBER_0  &trans     &trans  &trans  &trans  &trans
+&none
             >;
         };
 
         Settings {
             bindings = <
-&trans  &bt BT_SEL 0     &bt BT_SEL 1     &bt BT_SEL 2     &bt BT_SEL 3  &bt BT_SEL 4                     &trans                            &trans           &trans           &trans  &trans  &trans  &trans  &bootloader     &bt BT_CLR
-&trans  &trans           &rgb_ug RGB_BRI  &trans           &trans        &trans                           &trans                            &rgb_ug RGB_SAD  &rgb_ug RGB_SAI  &trans  &trans  &trans  &trans  &bt BT_CLR_ALL
-&trans  &rgb_ug RGB_EFR  &rgb_ug RGB_BRD  &rgb_ug RGB_EFF  &trans        &rgb_ug RGB_COLOR_HSB(37,69,65)  &rgb_ug RGB_COLOR_HSB(151,71,42)  &rgb_ug RGB_HUD  &rgb_ug RGB_HUI  &trans  &trans  &trans  &trans  &trans
-&trans  &trans           &trans           &trans           &trans        &trans                           &rgb_ug RGB_TOG                   &rgb_ug RGB_SPD  &rgb_ug RGB_SPI  &trans  &trans  &trans  &trans  &trans
-&trans  &trans           &trans           &trans           &trans        &trans                           &trans                            &trans           &trans           &trans
+&bootloader  &bt BT_SEL 0     &bt BT_SEL 1     &bt BT_SEL 2     &bt BT_SEL 3  &bt BT_SEL 4                     &trans                            &trans           &trans           &trans  &trans  &trans  &trans  &trans          &bt BT_CLR
+&trans       &trans           &rgb_ug RGB_BRI  &trans           &trans        &trans                           &trans                            &rgb_ug RGB_SAD  &rgb_ug RGB_SAI  &trans  &trans  &trans  &trans  &bt BT_CLR_ALL
+&trans       &rgb_ug RGB_EFR  &rgb_ug RGB_BRD  &rgb_ug RGB_EFF  &trans        &rgb_ug RGB_COLOR_HSB(37,69,65)  &rgb_ug RGB_COLOR_HSB(151,71,42)  &rgb_ug RGB_HUD  &rgb_ug RGB_HUI  &trans  &trans  &trans  &trans  &trans
+&trans       &trans           &trans           &trans           &trans        &trans                           &rgb_ug RGB_TOG                   &rgb_ug RGB_SPD  &rgb_ug RGB_SPI  &trans  &trans  &trans  &trans  &trans
+&trans       &trans           &trans           &trans           &trans        &trans                           &trans                            &trans           &trans           &trans
 &trans
             >;
         };
